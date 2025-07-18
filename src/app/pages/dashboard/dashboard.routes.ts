@@ -7,20 +7,24 @@ export const DASHBOARD_ROUTES: Routes = [
     children: [
       {
         path: '',
-        redirectTo: 'inicio',
+        redirectTo: 'turnos/agenda',
         pathMatch: 'full',
       },
-      {
+      /* {
         path: 'inicio',
         loadComponent: () => import('./home/home.component').then(m => m.HomeComponent),
+      }, */
+      {
+        path: 'turnos/agenda',
+        loadComponent: () => import('./pages/shifts/shifts.component').then(m => m.ShiftsComponent),
       },
       {
-        path: 'turnos',
-        loadComponent: () => import('./shifts/shifts.component').then(m => m.ShiftsComponent),
+        path: 'horarios/configuracion',
+        loadComponent: () => import('./pages/schedules/schedules.component').then(m => m.SchedulesComponent),
       },
       {
-        path: 'horarios',
-        loadComponent: () => import('./schedules/schedules.component').then(m => m.SchedulesComponent),
+        path: 'formulario/configuracion',
+        loadComponent: () => import('./pages/fields/fields.component').then(m => m.FieldsComponent),
       },
     ]
   }
