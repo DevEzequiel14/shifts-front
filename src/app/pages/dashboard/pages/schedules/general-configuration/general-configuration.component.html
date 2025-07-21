@@ -5,7 +5,7 @@
   <div>
     <label class="block text-sm font-medium text-foreground">Duración del turno (minutos)</label>
     <input type="number" class="w-full border-2 border-slate-200 px-2 py-1 rounded peer-focus:text-primary"
-      [(ngModel)]="duracion" />
+      [(ngModel)]="duration" />
   </div>
 
   <div>
@@ -14,7 +14,8 @@
       [(ngModel)]="buffer" />
   </div>
   <div>
-    <label class="block text-sm font-medium text-foreground">Turnos por hora:</label>
-    <span class="text-lg font-semibold text-foreground">1</span>
+    <label class="block text-sm font-medium text-foreground">Turnos por hora:
+      <span class="text-lg font-semibold text-foreground">{{ shiftsPerHour }}</span>
+    </label>
   </div>
 </div>

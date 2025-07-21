@@ -11,7 +11,12 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './general-configuration.component.css'
 })
 export class GeneralConfigurationComponent {
-  duracion = 30;
-  buffer = 5;
 
+  duration: number = 30;
+  buffer: number = 5;
+
+  get shiftsPerHour(): number {
+    const total = this.duration + this.buffer;
+    return total > 0 ? Math.floor(60 / total) : 0;
+  }
 }
