@@ -1,17 +1,23 @@
 <div class="border-2 border-slate-200 rounded p-3 space-y-2">
   <div class="flex items-center justify-between">
     <div class="flex items-center gap-2">
-      <input type="checkbox" class="toggle" [(ngModel)]="activo" />
-      <span class="font-medium text-foreground">{{ nombre }}</span>
-      <span *ngIf="!activo" class="text-sm text-muted-foreground  ml-2">Cerrado</span>
+      <input type="checkbox" class="toggle" [(ngModel)]="active" />
+      <span class="font-medium text-foreground">{{ name }}</span>
+      <span *ngIf="!active" class="text-sm text-muted-foreground  ml-2">Cerrado</span>
     </div>
-    <button *ngIf="activo" (click)="horarios.push({ desde: '09:00', hasta: '17:00' })"
+    <button *ngIf="active" (click)="schedules.push({ from: '09:00', to: '17:00' })"
       class="text-sm text-primary hover:underline">
       + Agregar horario
     </button>
   </div>
 
-  <div class="flex flex-col space-y-2" *ngIf="activo">
-    <app-time-item *ngFor="let h of horarios" [(desde)]="h.desde" [(hasta)]="h.hasta"></app-time-item>
+  <div class="flex flex-col space-y-2" *ngIf="active">
+    <div class="flex items-center gap-2" *ngFor="let h of schedules; let i = index">
+      <app-time-item [(from)]="h.from" [(to)]="h.to"></app-time-item>
+      <button *ngIf="schedules.length > 1" (click)="deleteSchedules(i)" class="text-red-500 hover:text-red-700"
+        aria-label="Eliminar horario" title="Eliminar horario">
+        <svg-icon src="assets/icons/heroicons/outline/x.svg"> </svg-icon>
+      </button>
+    </div>
   </div>
 </div>

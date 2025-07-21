@@ -10,5 +10,5 @@ import { NgFor } from '@angular/common';
   styleUrl: './days-schedules.component.css'
 })
 export class DaysSchedulesComponent {
-  dias = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'];
+  days = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'];
 }

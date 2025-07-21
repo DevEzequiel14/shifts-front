@@ -9,19 +9,19 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './time-item.component.css'
 })
 export class TimeItemComponent {
-  @Input() desde: string = '09:00';
-  @Output() desdeChange = new EventEmitter<string>();
-  @Input() hasta: string = '17:00';
-  @Output() hastaChange = new EventEmitter<string>();
+  @Input() from: string = '09:00';
+  @Output() fromChange = new EventEmitter<string>();
+  @Input() to: string = '17:00';
+  @Output() toChange = new EventEmitter<string>();
 
   // Métodos para emitir los cambios
   onDesdeChange(value: string) {
-    this.desde = value;
-    this.desdeChange.emit(value);
+    this.from = value;
+    this.fromChange.emit(value);
   }
 
   onHastaChange(value: string) {
-    this.hasta = value;
-    this.hastaChange.emit(value);
+    this.to = value;
+    this.toChange.emit(value);
   }
 }

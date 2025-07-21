@@ -1,5 +1,7 @@
 <div class="flex items-center gap-2">
-  <input type="time" [ngModel]="desde" (ngModelChange)="onDesdeChange($event)" class="border-2 border-slate-200 rounded px-2 py-1" />
+  <input type="time" [ngModel]="from" (ngModelChange)="onDesdeChange($event)"
+    class="border-2 border-slate-200 rounded px-2 py-1" />
   <span class="text-sm ">a</span>
-  <input type="time" [ngModel]="hasta" (ngModelChange)="onHastaChange($event)" class="border-2 border-slate-200 rounded px-2 py-1" />
+  <input type="time" [ngModel]="to" (ngModelChange)="onHastaChange($event)"
+    class="border-2 border-slate-200 rounded px-2 py-1" />
 </div>
