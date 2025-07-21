@@ -1,0 +1,20 @@
+<div class="bg-background p-4 rounded-lg shadow-sm space-y-4">
+  <h2 class="text-lg font-semibold text-foreground">Configuración General</h2>
+  <p class="text-sm text-muted-foreground ">Ajusta la duración de turnos y tiempos de buffer</p>
+
+  <div>
+    <label class="block text-sm font-medium text-foreground">Duración del turno (minutos)</label>
+    <input type="number" class="w-full border-2 border-slate-200 px-2 py-1 rounded peer-focus:text-primary"
+      [(ngModel)]="duracion" />
+  </div>
+
+  <div>
+    <label class="block text-sm font-medium text-foreground">Tiempo buffer entre turnos (minutos)</label>
+    <input type="number" class="w-full border-2 border-slate-200 px-2 py-1 rounded focus:border-text-primary"
+      [(ngModel)]="buffer" />
+  </div>
+  <div>
+    <label class="block text-sm font-medium text-foreground">Turnos por hora:</label>
+    <span class="text-lg font-semibold text-foreground">1</span>
+  </div>
+</div>

@@ -1,1 +1,15 @@
-<p>schedules works!</p>
+<div class="p-6 space-y-6">
+  <h1 class="text-2xl font-bold text-foreground">Configurar Horarios de Atención</h1>
+  <p class="text-sm text-muted-foreground">Define tus horarios de trabajo y la duración de cada turno</p>
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+    <app-general-configuration></app-general-configuration>
+    <app-days-schedules></app-days-schedules>
+  </div>
+
+  <div class="flex justify-end">
+    <button class="bg-primary text-white px-4 py-2 rounded hover:bg-blue-700">
+      Guardar Configuración
+    </button>
+  </div>
+</div>
