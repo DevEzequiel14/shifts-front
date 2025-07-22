@@ -5,13 +5,13 @@
   <div>
     <label class="block text-sm font-medium text-foreground">Duración del turno (minutos)</label>
     <input type="number" class="w-full border-2 border-slate-200 px-2 py-1 rounded peer-focus:text-primary"
-      [(ngModel)]="duration" />
+      [(ngModel)]="duration" appPositiveNumber/>
   </div>
 
   <div>
     <label class="block text-sm font-medium text-foreground">Tiempo buffer entre turnos (minutos)</label>
     <input type="number" class="w-full border-2 border-slate-200 px-2 py-1 rounded focus:border-text-primary"
-      [(ngModel)]="buffer" />
+      [(ngModel)]="buffer" appPositiveNumber/>
   </div>
   <div>
     <label class="block text-sm font-medium text-foreground">Turnos por hora:

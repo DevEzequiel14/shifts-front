@@ -1,12 +1,13 @@
 
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { PositiveNumberDirective } from '../../../../../shared/utils/positive-number.directive';
 
 
 @Component({
   selector: 'app-general-configuration',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, PositiveNumberDirective],
   templateUrl: './general-configuration.component.html',
   styleUrl: './general-configuration.component.css'
 })
