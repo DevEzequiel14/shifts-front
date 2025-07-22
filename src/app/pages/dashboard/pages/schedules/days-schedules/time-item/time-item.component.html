@@ -1,7 +1,15 @@
 <div class="flex items-center gap-2">
-  <input type="time" [ngModel]="from" (ngModelChange)="onDesdeChange($event)"
-    class="border-2 border-slate-200 rounded px-2 py-1" />
-  <span class="text-sm ">a</span>
-  <input type="time" [ngModel]="to" (ngModelChange)="onHastaChange($event)"
-    class="border-2 border-slate-200 rounded px-2 py-1" />
+  <select [ngModel]="from" (ngModelChange)="onFromChange($event)" class="border rounded px-2 py-1">
+    <option *ngFor="let h of hoursFromAvailable" [value]="h">
+      {{ h }}
+    </option>
+  </select>
+
+  <span class="text-sm text-gray-500">a</span>
+
+  <select [ngModel]="to" (ngModelChange)="onToChange($event)" class="border rounded px-2 py-1">
+    <option *ngFor="let h of hoursToAvailable" [value]="h">
+      {{ h }}
+    </option>
+  </select>
 </div>
