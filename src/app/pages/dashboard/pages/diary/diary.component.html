@@ -1,0 +1,23 @@
+<div class="p-6 space-y-6">
+  <h1 class="text-3xl font-bold text-foreground">Agenda de Turnos</h1>
+  <p class="text-muted-foreground">Gestiona y visualiza todos tus turnos programados</p>
+
+  <div class="bg-background p-4 rounded shadow flex items-center justify-between">
+    <button class="text-xl px-2 text-foreground">
+      <svg-icon src="assets/icons/heroicons/solid/chevron-left.svg" [svgClass]="'h-6 w-6'"></svg-icon>
+    </button>
+    <div class="text-center">
+      <h2 class="font-medium text-lg text-foreground">Martes, 22 De Julio De 2025</h2>
+      <p class="text-sm text-muted-foreground">4 turnos programados</p>
+    </div>
+    <button class="text-xl px-2 text-foreground">
+      <svg-icon src="assets/icons/heroicons/solid/chevron-right.svg" [svgClass]="'h-6 w-6'"> </svg-icon>
+    </button>
+  </div>
+
+  <div class="flex flex-col space-y-4">
+    <app-appointment-card *ngFor="let turno of appointments" [appointment]="turno"></app-appointment-card>
+  </div>
+
+  <app-appointment-stats></app-appointment-stats>
+</div>

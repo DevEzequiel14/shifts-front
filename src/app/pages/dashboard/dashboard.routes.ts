@@ -16,7 +16,7 @@ export const DASHBOARD_ROUTES: Routes = [
       }, */
       {
         path: 'turnos/agenda',
-        loadComponent: () => import('./pages/shifts/shifts.component').then(m => m.ShiftsComponent),
+        loadComponent: () => import('./pages/diary/diary.component').then(m => m.DiaryComponent),
       },
       {
         path: 'horarios/configuracion',
